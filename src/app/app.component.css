@@ -1,0 +1,14 @@
+.container{
+    text-align: center;
+    background-color: cornsilk ;
+    
+
+}
+.container-fluid{
+    align-content: center;
+    align-items: center;
+    padding-left: 15rem;
+    /* padding-top: 15rem;
+    margin-left: 10rem */
+
+}

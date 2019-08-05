@@ -1,0 +1,32 @@
+<div class="container-fluid px-3 mx-2">
+  <div class="container  px-3 mx-3 " style="width: 40rem; height: 15rem;">
+    <form #getMovies="ngForm" (ngSubmit)="onSubmit(getMovies.value)">
+      USER NAME: <input type="text" name="name" placeholder="ENTER NAME" [ngModel]>
+      <br>
+      <br>
+      <button style="align-items: center; " class="btn btn-primary" type="submit">SUBMIT</button>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="submitted==true">
+  <table class="table table-stripped ">
+    <thead>
+      <th>s.no</th>
+      <th>Movie ID</th>
+      <th>Movie Title</th>
+      <th> Release Year</th>
+      <th>Casts</th>
+      <th>Rating</th>
+    </thead>
+    <tr *ngFor="let movie of movies  let i= index">
+      <td> {{i}}</td>
+      <td> {{movie.movieId}}</td>
+      <td>{{movie.movieTitle}}</td>
+      <td>{{movie.releaseYear}}</td>
+      <td>{{movie.casts[0]}},{{movie.casts[1]}} </td>
+      <td>{{movie.rating}}</td>
+    </tr>
+  </table>
+</div>
+<router-outlet></router-outlet>
